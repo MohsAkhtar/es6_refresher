@@ -172,3 +172,15 @@ const customer1 = new Customer('Kevin', 300);
 console.log(customer1.info());
 
 // MODULES
+/*Importing things from one class into another. */
+
+// file 1 (file1.js)
+/* export const name = 'Jeff';
+    export const nums = [1,2,3];
+    export default Person;
+*/
+
+// file 2 (file2.js)
+/* import { name } from './file1.js';
+    import Person from './file1.js';
+*/
