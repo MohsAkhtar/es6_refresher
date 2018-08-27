@@ -44,10 +44,33 @@ const arrowFunc3 = (name, greeting) => console.log(greeting + name); //passing m
 const templateString = name => consol.log(`Hello ${name}`);
 
 // FOREACH
+/*Loop through an array to do something for each iteration.*/
+const fruits = ['Apples', 'Oranges', 'Grapes'];
+
+fruits.forEach((fruit, index) => {
+  console.log(fruit);
+});
 
 // MAP
+/*Returns array that you can change each item in the array however
+you want. In this example we are removing the last letter of the above
+fruits.*/
+const singleFruit = fruit.map(fruit => fruit.slice(0, -1));
+
+console.log(singleFruit);
 
 // FILTER
+/*Used to return an array with things filtered out. We are making a copy
+of the 'person' array and filtering out person with 'id' of 2.*/
+const people = [
+  { id: 1, name: 'Karen' },
+  { id: 2, name: 'Bob' },
+  { id: 3, name: 'Sharron' }
+];
+
+const people2 = poeple.filter(person => person.id != 2);
+
+console.log(people2);
 
 // SPREAD
 
