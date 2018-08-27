@@ -119,7 +119,56 @@ console.log(address.street, hobbies[0]);
 console.log(street);
 
 // CLASSES
+/*Inside class we have properties and methods. We need a constructor
+which automatically instantiates when the class is initialised.*/
+class Person {
+  constructor() {
+    console.log('ran');
+  }
+}
+
+const person3 = new Person();
+const person4 = new Person();
+
+// Remember 'this' pertains to the current object
+class Person2 {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const person5 = new Person2('Jon');
+console.log(person5.name);
+
+// To put in methods
+class Person3 {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name}`;
+  }
+}
+
+const person6 = new Person3('Anna');
+console.log(person6.greet());
 
 // SUBCLASSES
+/*Means we can extend another class. To inherit properties we use
+'super'.*/
+class Customer extends Person3 {
+  constructor(name, balance) {
+    super(name);
+    this.balance = balance;
+  }
+
+  info() {
+    return `${this.name} owes $${this.balance}.00`;
+  }
+}
+
+const customer1 = new Customer('Kevin', 300);
+console.log(customer1.info());
 
 // MODULES
