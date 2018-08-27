@@ -1,5 +1,5 @@
 // CONST & LET
-var name = 'john'; // es5 way
+var animal = 'cat'; // es5 way
 
 /*Used for block level scoping. Use const unless 
 you want to reassign it later*/
@@ -39,7 +39,7 @@ const arrowFunc2 = () => console.log('Hello'); //if we have only return val
 
 const arrowFunc3 = name => console.log('Hello ' + name); //passing one arg does not need parenthesis
 
-const arrowFunc3 = (name, greeting) => console.log(greeting + name); //passing more than one arg needs parenthesis
+const arrowFunc4 = (name, greeting) => console.log(greeting + name); //passing more than one arg needs parenthesis
 
 const templateString = name => consol.log(`Hello ${name}`);
 
@@ -55,7 +55,7 @@ fruits.forEach((fruit, index) => {
 /*Returns array that you can change each item in the array however
 you want. In this example we are removing the last letter of the above
 fruits.*/
-const singleFruit = fruit.map(fruit => fruit.slice(0, -1));
+const singleFruit = fruits.map(fruit => fruit.slice(0, -1));
 
 console.log(singleFruit);
 
@@ -68,7 +68,7 @@ const people = [
   { id: 3, name: 'Sharron' }
 ];
 
-const people2 = poeple.filter(person => person.id != 2);
+const people2 = people.filter(person => person.id != 2);
 
 console.log(people2);
 
