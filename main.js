@@ -68,13 +68,55 @@ const people = [
   { id: 3, name: 'Sharron' }
 ];
 
-const people2 = people.filter(person => person.id != 2);
+const people2 = people.filter(person => person.id !== 2);
 
 console.log(people2);
 
 // SPREAD
+/*Allows us to spread values out whether they are are array elements or
+object properties. Spread operator uses '...' notation. So in 'arr2' we
+are adding the values from 'arr1' and then the value of '4'.
+In 'arr3' we are combining filter to filter out the value of 2 and then
+adding the values of 'arr'.*/
+
+const arr = [1, 2, 3];
+const arr2 = [...arr, 4];
+const arr3 = [...arr.filter(num => num !== 2)];
+
+console.log(arr2);
+
+/* We can do the same with objects. Here we are copying 'person' contents
+to 'person2' then adding the 'email' field.*/
+const person1 = {
+  name: 'Brad',
+  age: 35
+};
+
+const person2 = {
+  ...person1,
+  email: 'brad@email.com'
+};
+
+console.log(person2);
 
 // DESTRUCTURING
+/*Used to basically pull values out of objects and arrays. Below we are
+pulling out the hobbies and address from the 'profile' object. And also
+the street from within the 'address' of the 'profile'.*/
+
+const profile = {
+  name: 'John Doe',
+  address: {
+    street: '40 Main St',
+    city: 'Boston'
+  },
+  hobbies: ['movies', 'music']
+};
+
+const { address, hobbies } = profile;
+const { street } = profile.address;
+console.log(address.street, hobbies[0]);
+console.log(street);
 
 // CLASSES
 
